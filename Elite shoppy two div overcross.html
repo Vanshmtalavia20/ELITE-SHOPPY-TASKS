@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWO DIVS CROSSES</title>
+    <style>
+        .main
+        {
+            height: 200px;
+            width: 400px;
+            background: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bot_2.jpg);
+            background-size: 100% 100%;
+            border: 2px solid;
+            margin: 200px auto; 
+            position: relative;
+            overflow: hidden;
+        }
+
+     .main::before
+     {
+        content: "HIII";
+        height: 200px;
+        width: 400px;
+        background: url(https://www.pngarts.com/files/2/Grey-Banner-PNG-Image-Background.png);
+        /* border: 2px solid; */
+        position: absolute;
+        top: 100%;
+        left: -101%;
+        transition: .4s;
+     }
+
+     .main::after
+     {
+        content: "HELOOO";
+        height: 200px;
+        width: 400px;
+        background: url(https://www.pngarts.com/files/2/Grey-Banner-PNG-Image-Background.png);
+        /* border: 2px solid; */
+        position: absolute;
+        top: -101%;
+        left: 100% ;
+        transition: .4s;
+     }
+
+     .main:hover::before
+     {
+        left: 0%;
+        top: 0%;
+     }
+
+
+     .main:hover::after
+     {
+        left: 0%;
+        top: 0;
+     }
+   
+
+       
+
+    
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+
+    </div>
+    
+</body>
+</html>
